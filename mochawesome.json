@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-08-22T19:53:50.071Z",
-    "end": "2022-08-22T19:54:08.987Z",
-    "duration": 18916,
+    "start": "2022-08-22T19:59:18.033Z",
+    "end": "2022-08-22T19:59:41.935Z",
+    "duration": 23902,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "03c13b8c-90f6-4b6c-b624-84ccef7c8f34",
+      "uuid": "c8bcbf5b-667b-40fe-86a4-814d56da3562",
       "title": "",
       "fullFile": "cypress/integration/cadastroClientes.spec.js",
       "file": "cypress/integration/cadastroClientes.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "10f26401-5fed-4b85-9e52-27dcf68c7ade",
+          "uuid": "aff606d3-8370-4cc6-8e29-408d6c0adab3",
           "title": "Cadastro de clientes",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Quando for informados os dados do cliente e finalizar, então o cadastro deve ser efetuado",
               "fullTitle": "Cadastro de clientes Quando for informados os dados do cliente e finalizar, então o cadastro deve ser efetuado",
               "timedOut": null,
-              "duration": 18886,
+              "duration": 23825,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit(\"?controller=authentication&back=my-account\");\ncy.get(\"#email_create\").type(user.email).tab(); // Caso passar por este assert significa que o sistema fez as validações de e-mail válido.\ncy.get(\".form-ok\").should('be.visible');\ncy.get(\"#SubmitCreate\").click();\ncy.get(\"input[id=id_gender1]\", {\n  timeout: 10000\n}).check();\ncy.get(\"#customer_firstname\").type(user.firstName);\ncy.get(\"#customer_lastname\").type(user.lastName); // Verifica se o e-mail digitado é igual ao e-mail informado na tela principal de login;\ncy.get(\"#email\").should('contain.value', user.email);\ncy.get(\"#passwd\").type('1234').tab();\ncy.get(\".form-error\").should('be.visible');\ncy.get(\"#passwd\").clear().type('12345').tab();\ncy.get(\".form-ok\").should('be.visible');\ncy.get(\"select#days\").select('11');\ncy.get(\"select#months\").select('November');\ncy.get(\"select#years\").select('1991');\ncy.get('input[type=checkbox]').check(); // Verifica se a aplicação replicou o nome e sobrenome nos campos do endereço\ncy.get(\"input#firstname\").should('contain.value', user.firstName);\ncy.get(\"input#lastname\").should('contain.value', user.lastName); // Irá limpar os campos de nome e sobrenome e adicionar outros para a 'Entrega'\ncy.get(\"input#firstname\").clear().type(chance.first());\ncy.get(\"input#lastname\").clear().type(chance.last());\ncy.get(\"input#company\").type(chance.last());\ncy.get(\"input#address1\").type(chance.last());\ncy.get(\"input#address2\").type(user.address2[positionAddress2]);\ncy.get(\"input#city\").type(user.city);\ncy.get(\"select#id_country\").select('United States');\ncy.get(\"select#id_state\").select('Alabama');\ncy.get(\"input#postcode\").type(user.zip);\ncy.get(\"input#alias\").type(chance.address());\ncy.get(\"input#phone_mobile\").type(user.phoneMobile);\ncy.get(\"button#submitAccount\").click();\ncy.url().should('contain', 'my-account');",
               "err": {},
-              "uuid": "47418ebe-b79a-401b-baf0-4b50e3cbae7e",
-              "parentUUID": "10f26401-5fed-4b85-9e52-27dcf68c7ade",
+              "uuid": "13d1d4d5-b570-42b1-894f-880bec8d1aa4",
+              "parentUUID": "aff606d3-8370-4cc6-8e29-408d6c0adab3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "47418ebe-b79a-401b-baf0-4b50e3cbae7e"
+            "13d1d4d5-b570-42b1-894f-880bec8d1aa4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18886,
+          "duration": 23825,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
