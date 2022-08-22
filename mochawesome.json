@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-22T14:34:39.656Z",
+    "end": "2022-08-22T14:35:11.965Z",
+    "duration": 32309,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d7dbc296-44eb-411e-91d7-64789ff67f88",
+      "title": "",
+      "fullFile": "cypress/integration/cadastroClientes.spec.js",
+      "file": "cypress/integration/cadastroClientes.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c17604c9-db55-41f9-a890-f404d6608495",
+          "title": "Cadastro de clientes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando for informados os dados do cliente e finalizar, então o cadastro deve ser efetuado",
+              "fullTitle": "Cadastro de clientes Quando for informados os dados do cliente e finalizar, então o cadastro deve ser efetuado",
+              "timedOut": null,
+              "duration": 32123,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"?controller=authentication&back=my-account\");\ncy.get(\"#email_create\").type(user.email).tab(); // Caso passar por este assert significa que o sistema fez as validações de e-mail válido.\ncy.get(\".form-ok\").should('be.visible');\ncy.get(\"#SubmitCreate\").click();\ncy.get(\"input[id=id_gender1]\", {\n  timeout: 10000\n}).check();\ncy.get(\"#customer_firstname\").type(user.firstName);\ncy.get(\"#customer_lastname\").type(user.lastName); // Verifica se o e-mail digitado é igual ao e-mail informado na tela principal de login;\ncy.get(\"#email\").should('contain.value', user.email);\ncy.get(\"#passwd\").type('1234').tab();\ncy.get(\".form-error\").should('be.visible');\ncy.get(\"#passwd\").clear().type('12345').tab();\ncy.get(\".form-ok\").should('be.visible');\ncy.get(\"select#days\").select('11');\ncy.get(\"select#months\").select('November');\ncy.get(\"select#years\").select('1991');\ncy.get('input[type=checkbox]').check(); // Verifica se a aplicação replicou o nome e sobrenome nos campos do endereço\ncy.get(\"input#firstname\").should('contain.value', user.firstName);\ncy.get(\"input#lastname\").should('contain.value', user.lastName); // Irá limpar os campos de nome e sobrenome e adicionar outros para a 'Entrega'\ncy.get(\"input#firstname\").clear().type(chance.first());\ncy.get(\"input#lastname\").clear().type(chance.last());\ncy.get(\"input#company\").type(chance.last());\ncy.get(\"input#address1\").type(chance.last());\ncy.get(\"input#address2\").type(user.address2[positionAddress2]);\ncy.get(\"input#city\").type(user.city);\ncy.get(\"select#id_country\").select('United States');\ncy.get(\"select#id_state\").select('Alabama');\ncy.get(\"input#postcode\").type(user.zip);\ncy.get(\"input#alias\").type(chance.address());\ncy.get(\"input#phone_mobile\").type(user.phoneMobile);\ncy.get(\"button#submitAccount\").click();\ncy.url().should('contain', 'my-account');",
+              "err": {},
+              "uuid": "93143b35-6bcd-44d7-827f-0e5851f77c42",
+              "parentUUID": "c17604c9-db55-41f9-a890-f404d6608495",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93143b35-6bcd-44d7-827f-0e5851f77c42"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32123,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
