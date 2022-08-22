@@ -5,7 +5,7 @@ Projeto desenvolvido durante o Chapter IV do bootcamp - Cypress Agilizei.
 ## 🚀 Conhecendo o desafio proposto
 
 **Desafio**
-A empresa Thunders, precisa garantir a integridade e a disponibilidade de seus serviços para clientes através de uma página de cadastro em seu site - automation practice.
+A empresa Thunders, precisa garantir a integridade e a disponibilidade de seus serviços para clientes através de uma página de cadastro em seu site -[automation practice](http://automationpractice.com/index.php).
 
 Essa funcionalidade é a de cadastro de clientes em seu e-commerce, que possui diversos produtos disponíveis, categorias e promoções. Diariamente, novos clientes chegam ao site e precisam efetuar um cadastro para que possam comprar seus produtos, por isso essa funcionalidade é crítica para o negócio.
 
@@ -23,7 +23,6 @@ Para garantir a integridade deste serviço, você deve construir um teste automa
 - não esqueça da execução no Github Actions
 - o relatório deve ser de fácil acesso, usando o Github Pages
 
-A aplicação que será automatizada é [My Store](http://automationpractice.com/index.php)
 ### 📋 Pré-requisitos
 - [Node](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
@@ -48,7 +47,7 @@ npm run cy:open
 
 * [Cypress](https://www.cypress.io/) - JavaScript End to End Testing Framework
 
-## papper Relatório de execução dos testes
+## 📃 Relatório de execução dos testes
 
 * [Acesse aqui o relatório gerado](https://mayconnoetzold.github.io/projectCypress-IV/)
 * [Acesse aqui o GitHubActions deste projeto](https://github.com/mayconnoetzold/projectCypress-IV/actions/workflows/Test.yml)
