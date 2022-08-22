@@ -26,6 +26,7 @@ Para garantir a integridade deste serviço, você deve construir um teste automa
 ### 📋 Pré-requisitos
 - [Node](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
+- [Cypress](https://www.cypress.io/)
 
 ### 🔧 Instalação
 Após a instalação dos pré-requisitos, para utilizar este projeto, primeiramente deve-se seguir os seguintes passos:
@@ -48,7 +49,11 @@ npm run cy:open
 * [Cypress](https://www.cypress.io/) - JavaScript End to End Testing Framework
 
 ## 📃 Relatório de execução dos testes
-
+Utiliza-se os scripts para geração do relatório de execução dos testes:
+```
+npm run report:mocha
+npm run report:merge
+```
 * [Acesse aqui o relatório gerado](https://mayconnoetzold.github.io/projectCypress-IV/)
 * [Acesse aqui o GitHubActions deste projeto](https://github.com/mayconnoetzold/projectCypress-IV/actions/workflows/Test.yml)
 
