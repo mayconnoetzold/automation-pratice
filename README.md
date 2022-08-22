@@ -4,7 +4,6 @@ Projeto desenvolvido durante o Chapter IV do bootcamp - Cypress Agilizei.
 
 ## 🚀 Conhecendo o desafio proposto
 
-**Desafio**
 A empresa Thunders, precisa garantir a integridade e a disponibilidade de seus serviços para clientes através de uma página de cadastro em seu site -[automation practice](http://automationpractice.com/index.php).
 
 Essa funcionalidade é a de cadastro de clientes em seu e-commerce, que possui diversos produtos disponíveis, categorias e promoções. Diariamente, novos clientes chegam ao site e precisam efetuar um cadastro para que possam comprar seus produtos, por isso essa funcionalidade é crítica para o negócio.
